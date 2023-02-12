@@ -581,6 +581,7 @@ footer a {
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 15px;
   margin: 10px 10px 0px 10px;
+  max-height: 500px;
 }
 .agenda .evento {
   display: grid;
@@ -588,6 +589,7 @@ footer a {
   min-height: -moz-fit-content;
   min-height: fit-content;
   align-items: start;
+  justify-content: center;
   font-family: "Roboto";
   color: black;
   background-color: rgb(231, 231, 231);
@@ -623,6 +625,7 @@ footer a {
   font-weight: 400;
   letter-spacing: normal;
   color: black;
+  max-width: 500px;
 }
 .agenda .evento h5 {
   font-size: 11px;

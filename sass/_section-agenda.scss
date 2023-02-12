@@ -11,11 +11,13 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 15px;
     margin: 10px 10px 0px 10px;
+    max-height: 500px;
         .evento{
             display: grid;
             grid-template-rows: auto auto auto auto;
             min-height: fit-content;
             align-items: start;
+            justify-content: center;
             font-family: 'Roboto';
             @include colores(black, rgb(231, 231, 231));
             text-align: center;
@@ -40,6 +42,7 @@
                 p{
                     @include fuente(11px, 400, normal);
                     color: $txt-1;
+                    max-width: 500px;
                 }
                 h5{
                     @include fuente(11px, 400, 1px);
