@@ -11,7 +11,6 @@
     grid-template-rows: 1fr 1fr 1fr;
     grid-row-gap: 15px;
     margin: 10px 10px 0px 10px;
-    max-height: 500px;
         .evento{
             display: grid;
             grid-template-rows: auto auto auto auto;
@@ -96,6 +95,7 @@
     }
 
     .agenda{
+        max-height: 500px;
             .evento{
                     h2{
                         @include fuente(14px, 900, normal);

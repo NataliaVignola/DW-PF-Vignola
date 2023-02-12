@@ -581,7 +581,6 @@ footer a {
   grid-template-rows: 1fr 1fr 1fr;
   grid-row-gap: 15px;
   margin: 10px 10px 0px 10px;
-  max-height: 500px;
 }
 .agenda .evento {
   display: grid;
@@ -680,6 +679,9 @@ footer a {
     display: grid;
     grid-template-rows: 50px 300px auto 40px;
     max-width: 100vw;
+  }
+  .agenda {
+    max-height: 500px;
   }
   .agenda .evento h2 {
     font-size: 14px;
