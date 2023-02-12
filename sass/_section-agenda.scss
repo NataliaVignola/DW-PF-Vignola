@@ -1,0 +1,114 @@
+///*AGENDA*////
+
+.body-agenda{
+    display: grid;
+    grid-template-rows: 50px 85vh auto 40px;
+    max-width: 100vw;
+}
+
+.agenda{
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-row-gap: 15px;
+    margin: 10px 10px 0px 10px;
+        .evento{
+            display: grid;
+            grid-template-rows: auto auto auto auto;
+            min-height: fit-content;
+            align-items: start;
+            font-family: 'Roboto';
+            @include colores(black, rgb(231, 231, 231));
+            text-align: center;
+            border-radius: $redondeado;
+            padding: 10px;
+            margin: 0px 5px 0px 5px;
+                h2{
+                    @include fuente(12px, 900, normal);
+                    @include colores($txt-2, $color-1);
+                    margin-bottom: 12px!important;
+                    border-radius: $redondeado!important;
+                }
+                h3{
+                    @include fuente(12px, 900, 1px);
+                    color: $txt-1;
+                    line-height: 12px;
+                }
+                h4{
+                    @include fuente(12px, 400, normal);
+                    color: $txt-1;
+                }
+                p{
+                    @include fuente(11px, 400, normal);
+                    color: $txt-1;
+                }
+                h5{
+                    @include fuente(11px, 400, 1px);
+                    color: $txt-2;
+                }
+        }
+}
+
+///*PRIMER BREAKPOINT*///
+@media (min-width:600px){
+
+    .body-agenda{
+        display: grid;
+        grid-template-rows: 50px 50vh auto 40px;
+        min-height: 100vh;
+    }
+
+    .agenda{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        margin: 10px 10px 20px 10px;
+            .evento{
+                margin: 0px 10px 0px 10px;
+                    h2{
+                        @include fuente(13px, 900, normal);
+                    }
+                    h3{
+                        @include fuente(13px, 900, 1px);
+                    }
+                    h4{
+                        @include fuente(13px, 400, normal);
+                    }
+                    p{
+                        @include fuente(12px, 400, normal);
+                    }
+                    h5{
+                        @include fuente(12px, 400, 1px);
+                    }
+            }
+    }
+}
+
+///*SEGUNDO BREAKPOINT*///
+@media (min-width: 1024px){
+
+    .body-agenda{
+        display: grid;
+        grid-template-rows: 50px 300px auto 40px;
+        max-width: 100vw;
+    }
+
+    .agenda{
+            .evento{
+                    h2{
+                        @include fuente(14px, 900, normal);
+                    }
+                    h3{
+                        @include fuente(14px, 900, 1px);
+                    }
+                    h4{
+                        @include fuente(14px, 400, normal);
+                    }
+                    p{
+                        @include fuente(13px, 400, normal);
+                    }
+                    h5{
+                        @include fuente(13px, 400, 1px);
+                    }
+            }
+    }
+}

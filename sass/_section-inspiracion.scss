@@ -1,0 +1,46 @@
+///*INSPIRACION*////
+
+.body-inspo{
+    display: grid;
+    grid-template-rows: 50px 85vh auto 40px;
+    max-width: 100vw;
+}
+
+.carrusel-inspo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.carrusel-foto{
+    max-width: 90vw;
+}
+
+.boton-artista{
+    margin: 10px 0px 10px 0px;
+}
+.btn-primary.disabled, .btn-primary:disabled {
+    @include colores($txt-1, $color-1);
+    border-color: $color-1;
+    opacity: 100%;
+    font-family: 'Roboto';
+}
+
+@media (min-width:600px){
+
+    .body-inspo{
+        display: grid;
+        grid-template-rows: 50px 50vh auto 40px;
+        min-height: 100vh;
+    }
+
+}
+
+@media (min-width:1024px){
+
+    .body-inspo{
+        display: grid;
+        grid-template-rows: 50px 300px auto 40px;
+        max-width: 100vw;
+    }
+
+}

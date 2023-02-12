@@ -1,0 +1,90 @@
+///*INFORMACION*////
+
+.body-info{
+    display: grid;
+    grid-template-rows: 50px 85vh auto 40px;
+    max-width: 100vw;
+}
+
+/*Acordion edicion de variable de Bootstrap*/
+.sec-accordion{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.accordion{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.accordion-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color-2;
+    border: none;
+}
+.accordion-button:not(.collapsed) {
+    @include colores($txt-1, $color-3);
+    box-shadow: unset;
+}
+.accordion-button-faqs{
+    font-family: 'Roboto';
+    @include fuente(12px, 900, normal);
+    @include colores($txt-1, $color-1);
+    border: 1.5px solid white;
+    width: 90vw;
+}
+.accordion-button:focus {
+    z-index: 3;
+    border-color: unset;
+    outline: 0;
+    box-shadow: unset;
+}
+.accordion-button:not(.collapsed)::after{
+    background-image: unset;
+}
+.accordion-body{
+    font-size: 11px;
+    font-family: 'Roboto';
+    text-align: left;
+    padding: 10px;
+}
+
+///*PRIMER BREAKPOINT*///
+@media (min-width:600px){
+    .body-info{
+        display: grid;
+        grid-template-rows: 50px 50vh auto 40px;
+        min-height: 100vh;
+    }
+
+    .accordion-button-faqs{
+        @include fuente(13px, 900, normal);
+    }
+
+    .accordion-body{
+        font-size: 12px;
+    }
+
+}
+
+///*SEGUNDO BREAKPOINT*///
+@media (min-width:1024px){
+
+    .body-info{
+        display: grid;
+        grid-template-rows: 50px 300px auto 40px;
+        max-width: 100vw;
+    }
+
+    .accordion-button-faqs{
+        @include fuente(14px, 900, normal);
+    }
+
+.accordion-body{
+    font-size: 13px;
+}
+
+}

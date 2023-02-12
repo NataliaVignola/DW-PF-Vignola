@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,900;1,100;1,300;1,400;1,900&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    color: black;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+*{box-sizing: unset;}
+
+///*VALORES*///
+
+$color-1: #fdee23;
+$color-2: #fdee2353;
+$color-3: #d7d6d6;
+
+$txt-1: black;
+$txt-2: white;
+
+$redondeado: 10px;
+
+@mixin colores ($color, $background-color) 
+{
+color: $color;
+background-color: $background-color;
+}
+
+@mixin fuente ($font-size, $font-weight, $letter-spacing) 
+{
+font-size: $font-size;
+font-weight: $font-weight;
+letter-spacing: $letter-spacing;
+}
+
+/*Boostrap modif*/
+$body-color: false;
+
+///*NABAR*///
+header{
+    display: flex;
+    justify-content: space-between;
+    max-width: 100vw;
+    padding: 5px 5px 5px 10px;
+    margin: 5px 0px 0px 0px;
+        img{
+            max-height: 35px;
+            padding: 1px 1px 1px 1px;
+        }
+}
+/*Navbar edicion de variable de Bootstrap*/
+.navbar{
+    padding-top: unset;
+    padding-bottom: unset;
+    ul{
+        align-items: flex-end;
+        background-color: white;
+        opacity: 80%;
+        border-bottom-left-radius: $redondeado;
+        border-bottom-right-radius: $redondeado;
+        padding: 5px 10px 5px 10px;
+        li {
+            @include fuente(14px, 400, normal);
+            color: $txt-1;
+            margin-top: 5px;
+            padding: unset;
+            margin: unset;
+        }
+    }
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: $txt-1;
+    font-weight: 900;
+}
+.navbar-light .navbar-toggler {
+    color: $color-3;
+    border-color: rgba(255, 255, 255, 0);
+}
+.navbar-toggler {
+    padding: unset;
+    padding-right: 5px;
+}
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: inherit;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+///*MAIN*///
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(140,140,140,1) 0%, rgba(240,240,240,1) 100%);
+    margin: 5px 0px 5px 0px;
+    max-width: 100vw;
+        h1 {
+            @include fuente(30px, 900, normal);
+            line-height: 18px;
+            color: $txt-1;
+            text-align: left;
+            padding: 10px 15px 20px 15px;
+            margin-bottom: unset;
+        }
+        h2{
+            @include fuente(14px, 400, normal);
+            color: $txt-1;
+            padding: 0px 15px 8px 15px;
+            margin-bottom: unset;
+        }
+        h3{
+            @include fuente(13px, 300, normal);
+            font-style: italic;
+            color: $txt-2;
+            padding: 0px 15px 8px 15px;
+            margin-bottom: unset;
+        }
+}
+/*primer breakpoint*/
+@media (min-width:600px){
+
+main{
+    h1{
+    font-size: 35px;
+    line-height: 22px;
+    }
+    h2{
+        font-size: 16px;
+    }
+    h3{
+        font-size: 15px;
+        padding-right: 100px;
+    }
+}
+}
+/*segundo breakpoint*/
+@media (min-width:1024px){
+
+    main{
+        h1{
+        font-size: 40px;
+        line-height: 22px;
+        }
+        h2{
+            font-size: 18px;
+            padding-bottom: 0px;
+        }
+        h3{
+            font-size: 17px;
+            padding-right: 100px;
+        }
+    }
+}
+
+///*FOOTER*///
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    margin-top: 10px;
+    margin-bottom: 15px;
+        a{
+            width: 25px;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+}
+.footer-img:hover{
+    transform: scale(130%);
+    transition-duration: 1s;
+}
